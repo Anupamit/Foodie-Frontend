@@ -1,0 +1,87 @@
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maincomp {
+  display: flex;
+  justify-content: center;
+}
+
+.imgdiv {
+  width: 750px;
+  overflow: hidden;
+}
+
+.imgDetails {
+  background-color: rgb(253, 228, 7);
+  color: black;
+  padding: 70px 40px;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDetails h1 {
+  width: 300px;
+  font-size: 43px;
+  font-weight: bolder;
+  padding: 10px 0px;
+  border-bottom: 4px solid black;
+}
+
+.imgpara {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.imgDetails button {
+  background-color: black;
+  padding: 15px;
+  width: 200px;
+  margin-top: 20px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.imgDetails button:hover {
+  background-color: rgb(250, 149, 17);
+}
+
+.Recent {
+  padding: 40px 0px;
+}
+
+.RecentBlock {
+  display: flex;
+}
+
+.Recent h1 {
+  text-align: left;
+  margin: 20px 0px;
+}
+
+.firstrow {
+  display: flex;
+}
+
+.secndpic {
+  width: 320px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.secondrow {
+  display: flex;
+  margin-top: 35px;
+}
+
+.blockdiv {
+  padding: 5px 8px;
+}
+.ptag {
+  margin-top: 10px;
+}

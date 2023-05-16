@@ -1,0 +1,26 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 172px;
+}
+
+.Navtitle{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.Linkdiv ul{
+    display: flex;
+    gap: 30px;
+}
+
+.Linkdiv ul a{
+   text-decoration: none;
+   color: rgb(50, 50, 50);
+   font-weight: bolder;
+}
+
+.Linkdiv ul a:hover{
+    color: rgb(133, 129, 129);
+}
