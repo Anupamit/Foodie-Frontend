@@ -1,0 +1,21 @@
+.imgsec{
+    display: flex;
+}
+.containt {
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.containt h2 span{
+    font-size: 37px;
+}
+.containt p{
+    margin-top: 30px;
+    font-size: 17px;
+}
+.rowcount{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}

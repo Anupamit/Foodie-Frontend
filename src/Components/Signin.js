@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/Signin.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 const Signin = (e) => {
     let [email,setEmail]= useState('')
@@ -40,7 +40,7 @@ const Signin = (e) => {
               marginTop: "20px",
             }}
           >
-            New User? <a href="/signup">Sign Up</a>
+            New User? <Link to="/signup">Sign Up</Link>
           </h5>
         </div>
       </div>
