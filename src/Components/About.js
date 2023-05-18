@@ -6,26 +6,48 @@ const About = () => {
   return (
     <div className="aboutpage">
       <TitleCompo title="About Us" />
-      <div className="imgsec">
+      <div className="about2div">
         <img
-          src="https://preview.colorlib.com/theme/stories/images/about.jpg.webp"
+          src="https://img1.wallspic.com/previews/6/7/3/8/6/168376/168376-food-ingredient-recipe-cooking-tableware-x750.jpg"
           alt=""
-          style={{width:"550px",height:"550px",marginLeft:"40px",marginTop:"40px"}}
+          width={500}
+          height={700}
         />
-        <div className="containt">
-        <h2>
-          <span>About Stories</span>
-        </h2>
-        <p>Far far away, behind the word mountains, far from the<br></br> countries Vokalia and Consonantia</p>
-        <div className="firstrow">
-          <div className="blockdiv">
-            <strong>10</strong>
-            <span>Years of Experienced</span>
+
+        <div className="about2divside">
+          <div className="aboutdetails">
+            <h1>About Stories</h1>
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia
+            </p>
+          </div>
+
+          <div className="about1row">
+            <div className="box">
+              <h1>10</h1>
+              <p>Years of Experienced</p>
+            </div>
+
+            <div className="box">
+              <h1>200</h1>
+              <p>Foods</p>
+            </div>
+          </div>
+
+          <div className="about1row">
+            <div className="box">
+              <h1>300</h1>
+              <p>LifeStyle</p>
+            </div>
+
+            <div className="box">
+              <h1>40</h1>
+              <p>Happy Customers</p>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
     </div>
   );
 };

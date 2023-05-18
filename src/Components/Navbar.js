@@ -9,11 +9,11 @@ const Navbar = () => {
 
       <div className="Linkdiv">
         <ul>
-          <Link to="/Portal">Home </Link>
-          <Link to="/Portal/about">About</Link>
-          <Link to="/Portal/foods">Foods</Link>
-          <Link to="/Portal/lifestyle">Lifestyle</Link>
-          <Link to="/Portal/contactus">Contact </Link>
+          <Link to="/portal">Home </Link>
+          <Link to="/portal/about">About</Link>
+          <Link to="/portal/addfood">Add Food </Link>
+          <Link to="/portal/foods">Foods Details</Link>
+          <Link to="/portal/contactus">Contact </Link>
         </ul>
       </div>
     </div>

@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 import "../Styles/Signin.css";
 import axios from "axios";
-import { useNavigate,Link } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom";
 
 const Signup = () => {
-  let [name,setName]=useState('')
-  let [email, setEmail]=useState('')
-  let [password, setPassword]=useState('')
-  let [confirmPassword, setConfirmPassword]=useState('')
-  const navigate = useNavigate()
-  
+  let [name, setName] = useState("");
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
+  let [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+
   const signUp = (e) => {
     e.preventDefault();
-    let data={name,email,password,confirmPassword}
-    if (name && email && password &&(password === confirmPassword)) {
-      axios.post('http://localhost:4000/signup', data)
-      .then((res)=>{
+    let data = { name, email, password, confirmPassword };
+    if (name && email && password && password === confirmPassword) {
+      axios.post("http://localhost:4000/signup", data).then((res) => {
         // alert("Sucessfully signed up")
-        alert(res.data.message)
-        navigate('/')
-      })
-    }else{
-      alert("Please fill all fields")
+        alert(res.data.message);
+        navigate("/");
+      });
+    } else {
+      alert("Please fill all fields");
     }
-  }
+  };
   return (
-    <div className="content">
+    <div className="content" style={{ marginLeft:"50px"}}>
       <div
         className="header"
         style={{ justifyContent: "space-between", display: "flex" }}
@@ -36,23 +35,32 @@ const Signup = () => {
             style={{
               justifyContent: "space-between",
               display: "flex",
+              fontSize: "15px",
               marginRight: "20px",
               marginTop: "20px",
             }}
           >
-            Already User? <Link to="/">Sign In</Link>
+            Already User ?{" "}
+            <Link
+              style={{
+                marginLeft: "10px",
+              }}
+              to="/"
+            >
+              Sign In
+            </Link>
           </h5>
         </div>
       </div>
       <div className="container">
         <div className="rowcontent">
           <div className="coloumndata">
-            <div className="col-md-8" >
+            <div className="col-md-8" style={{ marginLeft:"50px"}}>
               <div className="mb-4">
                 <h3>Welcome Back!</h3>
                 <p className="mb-4">First Sign Up then Login</p>
               </div>
-              <form onSubmit={signUp}> 
+              <form onSubmit={signUp}>
                 <div className="ipbox">
                   <input
                     style={{
@@ -61,7 +69,7 @@ const Signup = () => {
                       border: "1px solid blue",
                     }}
                     type="text"
-                    onChange={(e)=>setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Name"
                   />
                 </div>
@@ -74,8 +82,7 @@ const Signup = () => {
                     }}
                     type="text"
                     placeholder="Username@gmail.com"
-                    onChange={(e)=>setEmail(e.target.value)}
-
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="ipbox">
@@ -87,8 +94,7 @@ const Signup = () => {
                     }}
                     type="password"
                     placeholder="Enter Password"
-                    onChange={(e)=>setPassword(e.target.value)}
-
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <div className="ipbox">
@@ -100,7 +106,7 @@ const Signup = () => {
                     }}
                     type="password"
                     placeholder="Confirm Password"
-                    onChange={(e)=>setConfirmPassword(e.target.value)}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                 </div>
                 <div className="subbtn">

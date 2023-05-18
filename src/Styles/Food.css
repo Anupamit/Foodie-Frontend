@@ -1,0 +1,29 @@
+.cardbody {
+    width: 295px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 25px;
+    border: 1px solid lavender;
+    box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+ }
+ .cardimg img {
+    position: relative;
+    height: 140px;
+    width: 100%;
+ }
+ 
+ .cardinfo {
+    display: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 30px 20px 30px;
+ }
+ .cardinfo h3 {
+    font-size: 18px;
+    font-weight: 700;
+ }
+ .cardinfo p {
+    font-size: 14px;
+    font-weight: 600;
+ }
