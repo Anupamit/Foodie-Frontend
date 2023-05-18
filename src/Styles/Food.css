@@ -11,6 +11,7 @@
     position: relative;
     height: 140px;
     width: 100%;
+    cursor: pointer;
  }
  
  .cardinfo {

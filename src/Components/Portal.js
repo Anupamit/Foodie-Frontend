@@ -6,6 +6,7 @@ import About from "./About";
 import Food from "./Food";
 import Contactus from "./Contactus";
 import AddFood from "./AddFood";
+import FoodDetails from "./FoodDetails";
 import Footer from "./Footer";
 
 const Portal = () => {
@@ -18,6 +19,7 @@ const Portal = () => {
         <Route path="/foods" element={<Food />} />
         <Route path="/addfood" element={<AddFood />} />
         <Route path="/contactus" element={<Contactus />} />
+        <Route path='/foods/:_id'  element={<FoodDetails />}/>
       </Routes>
       <Footer/>
     </div>

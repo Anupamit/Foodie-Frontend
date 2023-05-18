@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import TitleCompo from "./TitleCompo";
 import axios from "axios";
 import "../Styles/Food.css";
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 const Food = () => {
   const [foods, setFoods] = useState([]);
@@ -20,6 +22,14 @@ const Food = () => {
     fetchData();
   }, []);
 
+  let navigate = useNavigate();
+  let location = useLocation();
+  let handleRead = (_id) => {
+    if (location.pathname == "/portal/foods") {
+      navigate(`/portal/foods/${_id}`);
+    }
+  };
+
   return (
     <div>
       <TitleCompo title="Food Detail" />
@@ -28,7 +38,7 @@ const Food = () => {
           {foods.map((food) => (
             <div className="cardbody" key={food._id}>
               <div className="cardimg">
-                <img src={food.image} alt="error" width={250} />
+                <img src={food.image} alt="error" width={250} onClick={()=>handleRead(food._id)} />
               </div>
               <div className="cardinfo">
                 <h3>{food.title}</h3>
