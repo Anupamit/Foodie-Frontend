@@ -12,7 +12,7 @@ const TitleCompo = ({title}) => {
         />
 
         <h1 className="compHead">{title}</h1>
-        <p className="compspan"><span>Home</span> <span>{title}</span></p>
+        <p className="compspan"><span>Home &#8658;</span> <span>{title}</span></p>
         <div className="overlay"></div>
         
       </div>

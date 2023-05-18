@@ -15,14 +15,18 @@
 .compHead{
     position: absolute;
     z-index: 10;
-    color: white !important;
-    top: 80%;
+    font-size: 35px;
+    color: rgb(227, 230, 234);
+    font-weight: 700;
+    top: 70%;
 }
 .compspan{
     position: absolute;
     z-index: 10;
-    color: #ede7fd;
-    top: 90%;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(242, 247, 251);
+    top: 85%;
 }
 
 .overlay{

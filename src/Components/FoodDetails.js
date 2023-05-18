@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "../Styles/FoodDetails.css";
 
 import axios from "axios";
@@ -27,10 +26,6 @@ const FoodDetails = () => {
 
   const { title, author, image, location, summery } = singlePost;
 
-  const handleLocationClick = () => {
-    window.open(location, "_blank");
-  };
-
   return (
     <div className="card-container">
       <div className="image-container">
@@ -47,17 +42,16 @@ const FoodDetails = () => {
           <p>
             <span className="detailNames">Summary: {summery}</span>
           </p>
-          <p>
-            <span className="detailNamess">
-            Location:{" "}
-              <Link
-                to={location}
-                onClick={handleLocationClick}
-              >
-                Click The Link To Find The Location
-              </Link>
-            </span>
-          </p>
+        </div>
+        <div className="mapImg">
+          <span>
+            <iframe
+              src={location}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </span>
         </div>
       </div>
     </div>

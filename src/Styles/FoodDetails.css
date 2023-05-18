@@ -1,5 +1,5 @@
 .details{
-    flex-direction: row ;
+    display: flex;
     margin: 20px;
     display:"flex";
     background: #231e39;
@@ -29,6 +29,13 @@
     padding: 7px;
     cursor: progress;
 }
-.detailNamess :hover {
-    color: #03bfcb;
+.mapImg{
+    margin-left: 50px;
+}
+.mapImg iframe{
+    width: 290px;
+    height: 180px;
+    border: 1px solid #03bfcb;
+    border-radius: 2px;
+    padding: 7px;
 }
