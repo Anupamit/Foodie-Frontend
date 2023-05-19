@@ -2,7 +2,7 @@
     width: 295px;
     display: inline-block;
     overflow: hidden;
-    margin: 10px;
+    margin: 7px;
     border-radius: 25px;
     border: 1px solid lavender;
     box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
@@ -29,12 +29,14 @@
     font-weight: 600;
  }
  .search-input{
-   border: 2px solid rgb(255, 255, 255);
+   border: 2px solid rgb(191, 25, 25);
    padding: 5px;
-   width: 350px;
-   height: 25px;
+   max-width: 400px;
+   max-height: 45px;
    font-size: 25px;
-   margin: 5px;
+   margin-left: 450px;
+   margin-top: 10px;
+   margin-bottom: 10px;
  }
    /* .search-input:focus {
       outline: none;

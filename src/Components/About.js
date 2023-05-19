@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import "../Styles/About.css";
 import TitleCompo from "./TitleCompo";
 
 const About = () => {
+  const [foods, setFoods] = useState([]);
+  const [usersData, setUserData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:4000/posts");
+        setFoods(response.data);
+        console.log(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchDataUsers = async () => {
+      try {
+        const response = await axios.get("http://localhost:4000/users");
+        setUserData(response.data);
+        console.log(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchDataUsers();
+  }, []);
+  const foodCount = foods.length;
+  const userCount = usersData.length;
   return (
     <div className="aboutpage">
       <TitleCompo title="About Us" />
@@ -30,7 +63,7 @@ const About = () => {
             </div>
 
             <div className="box">
-              <h1>200</h1>
+              <h1>{foodCount}</h1>
               <p>Foods</p>
             </div>
           </div>
@@ -42,7 +75,7 @@ const About = () => {
             </div>
 
             <div className="box">
-              <h1>40</h1>
+              <h1>{userCount}</h1>
               <p>Happy Customers</p>
             </div>
           </div>
