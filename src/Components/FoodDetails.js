@@ -48,6 +48,7 @@ const FoodDetails = () => {
             <iframe
               src={location}
               allowfullscreen=""
+              title="map"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>

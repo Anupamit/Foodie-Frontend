@@ -13,7 +13,7 @@ const Signin = (e) => {
     let data = { email, password };
     if (email && password) {
       axios.post("http://localhost:4000/login", data).then((res) => {
-        if (res.data.status == 200) {
+        if (res.data.status === 200) {
           navigate("/portal");
         } else {
           alert(res.data.message);
